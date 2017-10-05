@@ -3,4 +3,4 @@ Leider ist die Gruppe für die ich dieses Tool angefangen habe bedingt durch ein
 
 Es sollte bereits die vollen Regeln aus dem Aventurischem Boten 158 Umsetzen. Die Regeln fürs Personal aus dem Aventurischem Boten 159 fehlen leider noch komplett.
 
-<img src="Screenshot.jpg" alt="Screenshot" />
+<img src="https://raw.githubusercontent.com/Dragonjester/baronierechnerdsa/master/Screenshot.png" alt="Screenshot" />
