@@ -1,0 +1,152 @@
+﻿<Window x:Class="WpfApplication1.UI.MonatsWechsel.NächsterMonat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1.UI.MonatsWechsel"
+        mc:Ignorable="d"
+         DataContext="NächsterMonatVM"
+         WindowStartupLocation="CenterScreen" 
+        Title="Monatswechsel" Height="370.958" Width="505.333">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="" Grid.Row="0" Grid.Column="0"/>
+        <Label Content="Bezeichnung" Grid.Row="0" Grid.Column="0" FontWeight="Bold"/>
+        <Label Content="Preis" Grid.Row="0" Grid.Column="2" FontWeight="Bold"/>
+
+        <ComboBox IsEnabled="{Binding CanFest}" SelectedIndex="{Binding SelectedIndexFest}" Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center" >
+            <ComboBoxItem Name="cbi1">KEIN</ComboBoxItem>
+            <ComboBoxItem Name="cbi2">Elendes</ComboBoxItem>
+            <ComboBoxItem Name="cbi3">Karges</ComboBoxItem>
+            <ComboBoxItem Name="cbi4">Annehmbares</ComboBoxItem>
+            <ComboBoxItem Name="cbi5">Reichliches</ComboBoxItem>
+            <ComboBoxItem Name="cbi6">Üppiges</ComboBoxItem>
+            <ComboBoxItem Name="cbi7">Prachtvolles</ComboBoxItem>
+        </ComboBox>
+
+        <Label Content="Fest" Grid.Row="1" Grid.Column="0"/>
+        <Label Content="{Binding FestPreis, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="2"/>
+
+
+        <Grid  Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Faktor:" Grid.Row="0" Grid.Column="0"/>
+            <TextBox IsEnabled="{Binding CanArmenspeisung}" Text="{Binding Path=ArmenSpeisungVal, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0"  Grid.Column="1" Width="20" MaxLength="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Label Content="Armenspeisung/Wohltätiges" Grid.Row="2" Grid.Column="0"/>
+        <Label Content="{Binding ArmenSpeisungPreis, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="2"/>
+
+
+
+        <Grid  Grid.Row="3" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Faktor:" Grid.Row="0" Grid.Column="0"/>
+            <TextBox IsEnabled="{Binding CanInvestition}" Grid.Row="0"  Grid.Column="1" Width="20" MaxLength="2" Text="{Binding Path=InvestitionsVal, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Label Content="Investitionen" Grid.Row="3" Grid.Column="0"/>
+        <Label Content="{Binding InvestitionsPreis, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Grid.Column="2"/>
+
+
+
+
+        <Grid  Grid.Row="4" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Label Content="Korrespondenz mit einem Nachbarn" Grid.Row="4" Grid.Column="0"/>
+        <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding Nachbarn}" SelectedIndex="{Binding KorrespondenzIndex}" IsEnabled="{Binding CanKorrespondenz}"/>
+        <Label Content="{Binding KorrespodenzPreis, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Grid.Column="2"/>
+
+        <Label Content="Nur 1x im Jahr erlaubt:" Grid.Row="5" Grid.ColumnSpan="3" FontWeight="Bold"/>
+
+
+
+        <Grid  Grid.Row="6" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="D/100Ew" Grid.Row="0" Grid.Column="1"/>
+            <TextBox IsEnabled="{Binding CanSonderabgabe}" Grid.Row="0"  Grid.Column="0" Width="20" MaxLength="2" Text="{Binding Path=SonderabgabeVal, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Label Content="Sonderabgabe" Grid.Row="6" Grid.Column="0"/>
+        <Label Content="{Binding SonderabgabePreis, UpdateSourceTrigger=PropertyChanged}" Grid.Row="6" Grid.Column="2"/>
+
+
+        <ComboBox Grid.Row="7" Grid.Column="1" ItemsSource="{Binding Nachbarn}" SelectedIndex="{Binding EmpfangIndex}" IsEnabled="{Binding CanEmpfang}"/>
+
+        <Grid Grid.Row="7" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Empfang" />
+
+        </Grid>
+
+        <Label Content="{Binding EmpfangPreis, UpdateSourceTrigger=PropertyChanged}" Grid.Row="7" Grid.Column="2"/>
+
+        <Grid  Grid.Row="8" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Label Content="Abkommen" Grid.Row="8" Grid.Column="0"/>
+        <ComboBox Grid.Row="8" Grid.Column="1" ItemsSource="{Binding Nachbarn}" SelectedIndex="{Binding AbkommenIndex}" IsEnabled="{Binding CanAbkommen}"/>
+        <Label Content="{Binding AbkommenPreis, UpdateSourceTrigger=PropertyChanged}" Grid.Row="8" Grid.Column="2"/>
+
+        <CheckBox IsEnabled="{Binding CanWarenschau}" IsChecked="{Binding WarenschauVal, UpdateSourceTrigger=PropertyChanged}" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="Warenschau" Grid.Column="0" Grid.Row="9"/>
+        <Label Content="{Binding WarenschauPreis, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" Grid.Row="9"/>
+
+        <Label Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" Content="Gesamtpreis:" HorizontalAlignment="Right"/>
+        <Label Grid.Row="10" Grid.Column="2" Content="{Binding GesamtPreis}"/>
+        <Button x:Name="button" Command="{Binding OkCmd}" Content="OK" Grid.Column="1" HorizontalAlignment="Left" Margin="216,14,-7,0" Grid.Row="11" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
+        <Button x:Name="button1" Command="{Binding CancelCmd}" Content="Abbrechen" Grid.Column="1" HorizontalAlignment="Left" Margin="124,14,0,0" Grid.Row="11" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</Window>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApplication1.UI.Nachbar.NeuerNachbar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1.UI.Nachbar"
+        mc:Ignorable="d"
+        Title="NeuerNachbar" Height="156.268" Width="262.395">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+        <Label Content="Name der Baronie: " Grid.Row="0" Grid.Column="0"/>
+        <TextBox  Grid.Row="0" Grid.Column="1" Text="{Binding NameDerBaronie}" Margin="1,0,-33,0"/>
+
+        <Label Content="SO des Barones: " Grid.Row="1" Grid.Column="0"/>
+        <TextBox  Grid.Row="1" Grid.Column="1" Text="{Binding SoDerBaronie}" Margin="1,0,-33,0" />
+
+        <Label Content="Startbeziehungswert: " Grid.Row="2" Grid.Column="0"/>
+        <ComboBox  SelectedIndex="{Binding SelectedIndexBeziehung}" Grid.Row="2" Grid.Column="1" Margin="1,0,-33,0">
+            <ComboBoxItem Name="cbi1">Verfeindet</ComboBoxItem>
+            <ComboBoxItem Name="cbi2">Abgeneigt</ComboBoxItem>
+            <ComboBoxItem Name="cbi3">Skeptisch</ComboBoxItem>
+            <ComboBoxItem Name="cbi4">Neutral</ComboBoxItem>
+            <ComboBoxItem Name="cbi5">Offen</ComboBoxItem>
+            <ComboBoxItem Name="cbi6">Verbündet</ComboBoxItem>
+            <ComboBoxItem Name="cbi7">Freundschaftlich</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="button" IsEnabled="{Binding IsOkayAllowed, UpdateSourceTrigger=PropertyChanged}" Command="{Binding OkCmd}" Content="OK" Grid.Column="1" Grid.Row="3" VerticalAlignment="Top" Width="75" Margin="20,10,0,0" HorizontalAlignment="Center"/>
+        <Button x:Name="button1" Command="{Binding CancelCmd}" Content="Abbrechen" Grid.Column="0"  Grid.Row="3" VerticalAlignment="Top" Width="75" Margin="0,10,0,0" HorizontalAlignment="Center" />
+
+    </Grid>
+</Window>

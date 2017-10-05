@@ -1,0 +1,15 @@
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Release\WpfApplication1.exe.config
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Release\WpfApplication1.exe
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Release\WpfApplication1.pdb
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Release\UI\MainWindow\MainWin.g.cs
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Release\UI\StartScreen\StartWindow.g.cs
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Release\App.g.cs
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Release\WpfApplication1_MarkupCompile.cache
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Release\WpfApplication1_MarkupCompile.lref
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Release\UI\MainWindow\MainWin.baml
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Release\UI\StartScreen\StartWindow.baml
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Release\WpfApplication1.g.resources
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Release\WpfApplication1.Properties.Resources.resources
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Release\WpfApplication1.csproj.GenerateResource.Cache
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Release\WpfApplication1.exe
+C:\Users\CAA\documents\visual studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Release\WpfApplication1.pdb
