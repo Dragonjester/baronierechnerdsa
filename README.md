@@ -3,6 +3,6 @@ Leider ist die Gruppe für die ich dieses Tool angefangen habe bedingt durch ein
 
 Es sollte bereits die vollen Regeln aus dem Aventurischem Boten 158 Umsetzen. Die Regeln fürs Personal aus dem Aventurischem Boten 159 fehlen leider noch komplett.
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=USK2EQHDTMPP8&source=url) Du könntest mir einen Kaffe ausgeben!
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/deltahedron) Du könntest mir einen Kaffe ausgeben!
 
 <img src="https://raw.githubusercontent.com/Dragonjester/baronierechnerdsa/master/Screenshot.png" alt="Screenshot" />
